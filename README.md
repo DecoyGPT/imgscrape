@@ -1,19 +1,20 @@
 ## ImgScrape
 
-`ImgScrape` is a simple Python script that allows users to extract all image URLs from a given web page. Using both BeautifulSoup and Selenium, it handles static and JavaScript-loaded images, ensuring a comprehensive scan of the page's visual content.
+`ImgScrape` is a Python script that extracts all image URLs from a given web page. It captures both statically-loaded and dynamically-loaded images, ensuring comprehensive coverage of a page's visual content.
 
 ### Features:
 
-- Scans for both statically-loaded and dynamically-loaded images.
-- Provides console feedback for better user interaction.
-- Generates an HTML file with previews of found images.
-- User-friendly: just input the URL you want to scrape.
+- Scans both statically-loaded and dynamically-loaded images.
+- Converts known thumbnail URLs (e.g., from Shopify) to full-sized image URLs when possible.
+- Provides console feedback for a transparent user experience.
+- Generates an HTML file with previews of the retrieved images.
+- User-friendly: simply input the URL you want to scrape and your desired output filename.
 
 ### Dependencies:
 
 - `beautifulsoup4`: For parsing the webpage.
-- `selenium`: To render pages and handle dynamically loaded content.
-- ChromeDriver: An executable required by Selenium to interact with the Google Chrome browser.
+- `selenium`: To handle pages with dynamically loaded content.
+- ChromeDriver: An executable needed by Selenium to control the Google Chrome browser.
 
 ### Installation:
 
@@ -22,31 +23,31 @@
    git clone https://github.com/DecoyGPT/ImgScrape.git
    ```
 
-2. Navigate to the cloned directory:
+2. Change to the cloned directory:
    ```sh
    cd ImgScrape
    ```
 
-3. Install the required Python libraries:
+3. Install the required Python packages:
    ```sh
    pip install beautifulsoup4 selenium
    ```
 
-4. Download the [ChromeDriver executable](https://sites.google.com/a/chromium.org/chromedriver/) and place it in the same directory as the script, or ensure it's available in your system's PATH.
+4. Download the [ChromeDriver executable](https://sites.google.com/a/chromium.org/chromedriver/) and place it in the same directory as the script or make sure it's in your system's PATH.
 
 ### Usage:
 
-1. Run the script:
+1. Execute the script:
    ```sh
    python ImgScrape.py
    ```
 
-2. Enter the desired URL when prompted.
+2. When prompted, input the website URL and your desired output filename.
 
-3. Wait for the script to navigate the page, extract images, and generate an output HTML file.
+3. The script will navigate the page, retrieve images, and generate an HTML file with the specified name.
 
-4. Check the generated `output.html` in the project directory to view the images.
+4. Review the generated HTML file in the project directory to see the images.
 
 ### Disclaimer:
 
-Please use this tool responsibly and ethically. Do not scrape websites without permission, and always respect the `robots.txt` of any site.
+Use this tool responsibly and ethically. Avoid scraping websites without permission and always heed the `robots.txt` file of any website.
